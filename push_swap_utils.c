@@ -1,0 +1,100 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap_utils.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acaceres <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/21 06:48:43 by acaceres          #+#    #+#             */
+/*   Updated: 2023/06/21 09:24:30 by acaceres         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+
+#include "ft_printf/ft_printf.h"
+#include "push_swap.h"
+
+void	print_list(t_list *list)
+{
+	int	count;
+
+	count = 0;
+	if (!list)
+	{
+		ft_printf("Empty List");
+		return ;
+	}
+	while (list)
+	{
+		++count;
+		printf("%d - Node: %i\n", count, *(list->content));
+		list = list->next;
+	}
+}
+
+void	free_list(t_list **list)
+{
+	t_list	*current;
+	t_list	*link;
+
+	if (!list)
+		return ;
+	current = *list;
+	link = 0;
+	while (current)
+	{
+		link = current->next;
+		free(current);
+		current = link;
+	}
+	*list = NULL;
+}
+
+t_list	*ft_new_node(int *val)
+{
+	t_list	*node;
+
+	node = malloc(sizeof(t_list));
+	if (!node)
+		return (NULL);
+	node->content = val;
+	node->next = NULL;
+	return (node);
+}
+
+void	lst_add_back(t_list **list, t_list *node)
+{
+	t_list	*tail;
+
+	if (!*list)
+	{
+		*list = node;
+		return ;
+	}
+	tail = lstlast(*list);
+	tail->next = node;
+}
+
+t_list	*new_lst(char **argv)
+{
+	t_list			*list;
+	t_list			*node;
+	int				*n;
+
+	list = NULL;
+	node = NULL;
+	n = 0;
+	if (!argv)
+		return (NULL);
+	while (*argv)
+	{
+		n = malloc(sizeof(int));
+		*n = ft_atoi(*argv++);
+		if (n < 0)
+			return (ft_printf("Error"), NULL);
+		node = ft_new_node(n);
+		lst_add_back(&list, node);
+	}
+	return (list);
+}
