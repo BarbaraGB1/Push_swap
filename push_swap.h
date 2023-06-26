@@ -23,7 +23,7 @@
 //	struct t_lst	*next;
 //}					t_lst;
 
-int	swap(t_list *lst, char *mvmt);
+void	swap(t_list *lst);
 void	lst_add_back(t_list **list, t_list *node);
 t_list	*ft_new_node(int *val);
 t_list	*new_lst(char **argv);

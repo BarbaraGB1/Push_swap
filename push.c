@@ -9,7 +9,7 @@ void	push(t_list **lst, t_list **second)
 		return ;
 	tmp = *lst;
 	*lst = (*lst)->next;
-	if (ft_lstsize(*second) == 0)
+	if ((*lst)->next->next)
 	{
 		tmp->next = NULL;
 		*second = tmp;
