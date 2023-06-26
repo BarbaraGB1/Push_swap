@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME		= push_swap
-SRCS		= push_swap.c push_swap_utils.c swap.c rotate.c reverse.c
+SRCS		= push_swap.c push_swap_utils.c swap.c rotate.c reverse.c push.c
 OBJS		= $(SRCS:.c=.o)
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror -g3

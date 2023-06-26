@@ -35,6 +35,7 @@ int	main(int argc, char **argv)
 {
 	int		i;
 	t_list	*list;
+	t_list	*second;
 
 	i = 0;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
@@ -48,9 +49,15 @@ int	main(int argc, char **argv)
 	else
 	{
 		list = new_lst(argv + 1);
-		reverse(&list);
-		ft_printf("Hola");
+		push(&list, &second);
+		ft_printf("primera vez \n");
 		print_list(list);
+		print_list(second);
+		ft_printf("segunda vez \n");
+		push(&list, &second);
+		print_list(list);
+		print_list(second);
+
 	}
 	return (0);
 }
