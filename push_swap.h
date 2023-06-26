@@ -30,5 +30,6 @@ t_list	*new_lst(char **argv);
 void	print_list(t_list *list);
 void	free_list(t_list **list);
 t_list	*lstlast(t_list *lst);
+void	rotate(t_list **lst);
 
 #endif

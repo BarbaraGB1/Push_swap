@@ -48,7 +48,7 @@ int	main(int argc, char **argv)
 	else
 	{
 		list = new_lst(argv + 1);
-		swap(list, "sa");
+		rotate(&list);
 		print_list(list);
 	}
 	return (0);
