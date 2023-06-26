@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: acaceres <acaceres@student.42madrid.com>   +#+  +:+       +#+         #
+#    By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/06/20 13:37:24 by acaceres          #+#    #+#              #
-#    Updated: 2023/06/23 08:24:34 by bargarci         ###   ########.fr        #
+#    Created: 2023/06/26 11:40:52 by bargarci          #+#    #+#              #
+#    Updated: 2023/06/26 11:47:20 by bargarci         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ $(PRINTF):
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) push_swap.dSYM
 	$(MAKE) clean -C $(LIBFT_DIR)
 	$(MAKE) clean -C $(PRINTF_DIR)
 

@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acaceres <acaceres@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/20 13:18:07 by acaceres          #+#    #+#             */
-/*   Updated: 2023/06/21 09:22:14 by acaceres         ###   ########.fr       */
+/*   Created: 2023/06/26 11:43:19 by bargarci          #+#    #+#             */
+/*   Updated: 2023/06/26 11:43:25 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "push_swap.h"
 
 char	**two_argv(char *s)
@@ -49,15 +48,19 @@ int	main(int argc, char **argv)
 	else
 	{
 		list = new_lst(argv + 1);
-		push(&list, &second);
-		ft_printf("primera vez \n");
-		print_list(list);
-		print_list(second);
-		ft_printf("segunda vez \n");
-		push(&list, &second);
-		print_list(list);
-		print_list(second);
-
+	// 	push(&list, &second, "pp \n");
+	// 	push(&list, &second, "pp \n");
+	// 	print_list(list);
+	// 	print_list(second);
+	// 	swap_ss(list, second, "ss \n");
+	// 	print_list(list);
+	// 	print_list(second);
+	// 	rotate_rr(&list, &second, "rr \n");	
+	// 	print_list(list);
+	// 	print_list(second);
+	// 	reverse_rrr(&list, &second, "rrr \n");	
+	// 	print_list(list);	
+	// 	print_list(second);
 	}
 	return (0);
 }

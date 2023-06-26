@@ -21,8 +21,8 @@
 // }	t_lst;
 typedef struct s_list
 {
-int			*content;
-struct s_list	*next;
+	int				*content;
+	struct s_list	*next;
 }	t_list;
 /* typedef unsigned long size_t */
 

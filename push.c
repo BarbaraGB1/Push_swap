@@ -1,7 +1,17 @@
-#include "libft/libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/26 11:42:50 by bargarci          #+#    #+#             */
+/*   Updated: 2023/06/26 11:43:11 by bargarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
-void	push(t_list **lst, t_list **second)
+void	push(t_list **lst, t_list **second, char *var)
 {
 	t_list	*tmp;
 
@@ -19,4 +29,5 @@ void	push(t_list **lst, t_list **second)
 		tmp->next = *second;
 		*second = tmp;
 	}
+	ft_printf("%s", var);
 }

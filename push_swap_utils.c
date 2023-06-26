@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acaceres <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/21 06:48:43 by acaceres          #+#    #+#             */
-/*   Updated: 2023/06/21 09:24:30 by acaceres         ###   ########.fr       */
+/*   Created: 2023/06/26 11:44:09 by bargarci          #+#    #+#             */
+/*   Updated: 2023/06/26 11:44:14 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stdio.h>
 
 #include "ft_printf/ft_printf.h"
