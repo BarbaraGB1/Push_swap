@@ -48,7 +48,8 @@ int	main(int argc, char **argv)
 	else
 	{
 		list = new_lst(argv + 1);
-		rotate(&list);
+		reverse(&list);
+		ft_printf("Hola");
 		print_list(list);
 	}
 	return (0);
