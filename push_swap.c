@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
+#include "ft_printf/ft_printf.h"
 
 char	**two_argv(char *s)
 {
@@ -34,7 +35,7 @@ int	main(int argc, char **argv)
 {
 	int		i;
 	t_list	*list;
-	t_list	*second;
+//	t_list	*second;
 
 	i = 0;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
@@ -48,6 +49,9 @@ int	main(int argc, char **argv)
 	else
 	{
 		list = new_lst(argv + 1);
+		if(!is_order(list))
+			return (ft_printf("Error, argumentos no validos."));
+
 	// 	push(&list, &second, "pp \n");
 	// 	push(&list, &second, "pp \n");
 	// 	print_list(list);

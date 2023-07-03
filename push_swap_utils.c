@@ -14,6 +14,28 @@
 #include "ft_printf/ft_printf.h"
 #include "push_swap.h"
 
+int	is_order(t_list *lst)
+{
+	t_list	*iter;
+
+	if (!lst)
+		return (0);
+	iter = lst;
+	while (iter->next)
+	{
+		if (*iter->content > *iter->next->content)
+		{
+			return (1);
+		}
+		iter = iter->next;
+	}
+	return (0);
+}
+
+// int no_digit(t_list *lst)
+// {
+//
+// }
 void	print_list(t_list *list)
 {
 	int	count;
