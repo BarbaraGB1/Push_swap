@@ -10,33 +10,34 @@
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include <unistd.h>
-# include <fcntl.h>
-# include <stdlib.h>
-# include "libft/libft.h"
-# include "ft_printf/ft_printf.h"
+#define PUSH_SWAP_H
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdlib.h>
+#include "libft/libft.h"
+#include "ft_printf/ft_printf.h"
 
-//typedef struct t_lst {
+// typedef struct t_lst {
 //	int				*val;
 //	struct t_lst	*next;
-//}					t_lst;
+// }					t_lst;
 
-void	swap(t_list *lst, char *var);
-void	lst_add_back(t_list **list, t_list *node);
-t_list	*ft_new_node(int *val);
-t_list	*new_lst(char **argv);
-void	print_list(t_list *list);
-void	free_list(t_list **list);
-t_list	*lstlast(t_list *lst);
-void	rotate(t_list **lst, char *var);
-void	reverse(t_list **lst, char *var);
-void	push(t_list **lst, t_list **second, char *var);
-void	rotate_rr(t_list **lst, t_list **second, char *var);
-void	swap_ss(t_list *lst, t_list *second, char *var);
-void	reverse_rrr(t_list **lst, t_list **second, char *var);
-int		is_order(t_list *lst);
-int		no_repeat(t_list *lst);
-int		no_digit(char **argv);
+void swap(t_list *lst, char *var);
+void lst_add_back(t_list **list, t_list *node);
+t_list *ft_new_node(int *val);
+t_list *new_lst(char **argv);
+void print_list(t_list *list);
+void free_list(t_list **list);
+t_list *lstlast(t_list *lst);
+void rotate(t_list **lst, char *var);
+void reverse(t_list **lst, char *var);
+void push(t_list **lst, t_list **second, char *var);
+void rotate_rr(t_list **lst, t_list **second, char *var);
+void swap_ss(t_list *lst, t_list *second, char *var);
+void reverse_rrr(t_list **lst, t_list **second, char *var);
+int is_order(t_list *lst);
+int no_repeat(t_list *lst);
+int no_digit(char **argv);
+void three_arguments(t_list *list);
 
 #endif

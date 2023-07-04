@@ -11,12 +11,12 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-void	swap(t_list *lst, char *var)
+void swap(t_list *lst, char *var)
 {
-	int	*temp;
+	int *temp;
 
 	if (ft_lstsize(lst) <= 1)
-		return ;
+		return;
 	else
 	{
 		temp = lst->content;
@@ -27,7 +27,7 @@ void	swap(t_list *lst, char *var)
 		ft_printf("%s", var);
 }
 
-void	swap_ss(t_list *lst, t_list *second, char *var)
+void swap_ss(t_list *lst, t_list *second, char *var)
 {
 	swap(lst, 0);
 	swap(second, 0);
