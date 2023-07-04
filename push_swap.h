@@ -36,5 +36,7 @@ void	rotate_rr(t_list **lst, t_list **second, char *var);
 void	swap_ss(t_list *lst, t_list *second, char *var);
 void	reverse_rrr(t_list **lst, t_list **second, char *var);
 int		is_order(t_list *lst);
+int		no_repeat(t_list *lst);
+int		no_digit(char **argv);
 
 #endif

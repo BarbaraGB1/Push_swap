@@ -16,7 +16,7 @@ int	ft_putnbr_base(unsigned int n, char *base)
 {
 	unsigned long	len;
 
-	len = ft_strlen(base);
+	len = ft_strlen_print(base);
 	if (n >= len)
 	{
 		ft_putnbr_base(n / len, base);
@@ -32,7 +32,7 @@ int	ft_lennbr_base(unsigned long long n, char *base)
 	unsigned long	len;
 	unsigned long	x;
 
-	x = ft_strlen(base);
+	x = ft_strlen_print(base);
 	len = 0;
 	while (n != 0)
 	{

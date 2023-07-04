@@ -19,7 +19,7 @@ int		ft_printf(char const *str, ...);
 int		ft_putnbr_base(unsigned int n, char *base);
 int		ft_lennbr_base(unsigned long long n, char *base);
 int		ft_putptr(unsigned long long n, char *base);
-int		ft_strlen(const char *s);
+int		ft_strlen_print(const char *s);
 int		ft_functions(char symbol, va_list args);
 int		ft_putnbr_unsigned(unsigned int n, char *base);
 int		ft_putchar(char c);

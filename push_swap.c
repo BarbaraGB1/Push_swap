@@ -33,11 +33,11 @@ t_list	*lstlast(t_list *lst)
 
 int	main(int argc, char **argv)
 {
-	int		i;
+//	int		i;
 	t_list	*list;
 //	t_list	*second;
 
-	i = 0;
+//	i = 0;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (ft_putstr("Error"), 0);
 	else if (argc == 2)
@@ -48,9 +48,11 @@ int	main(int argc, char **argv)
 	}
 	else
 	{
+		if (!no_digit(argv))
+			return (ft_printf("Los argumentos no pueden contener carácteres alfabéticos"), 0);
 		list = new_lst(argv + 1);
-		if(!is_order(list))
-			return (ft_printf("Error, argumentos no validos."));
+		if(!is_order(list) || !no_repeat(list))
+			return (ft_printf("Error, argumentos no validos."), 0);
 
 	// 	push(&list, &second, "pp \n");
 	// 	push(&list, &second, "pp \n");

@@ -14,6 +14,30 @@
 #include "ft_printf/ft_printf.h"
 #include "push_swap.h"
 
+int no_repeat(t_list *lst)
+{
+	t_list *current;
+	t_list *iter;
+
+	current = NULL;
+	iter = NULL;
+	if (!lst)
+		return (0);
+	current = lst;
+	iter = lst->next;
+	while (current)
+	{
+		iter = current->next;
+		while (iter)
+		{
+			if (*current->content == *iter->content)
+				return (0);
+			iter = iter->next;
+		}
+		current = current->next;
+	}
+	return (1);
+}
 int	is_order(t_list *lst)
 {
 	t_list	*iter;
@@ -32,10 +56,25 @@ int	is_order(t_list *lst)
 	return (0);
 }
 
-// int no_digit(t_list *lst)
-// {
-//
-// }
+ int no_digit(char **argv)
+ {
+	int	i;
+	int	j;
+
+	i = 1;
+	while(argv[i])
+	{
+		j = 0;
+		while(argv[i][j])
+		{
+			if(!(argv[i][j] >= '0') && !(argv[i][j] <= '9'))
+				return (0);
+			j++;
+		}
+	i++;
+	}
+	return (1);
+ }
 void	print_list(t_list *list)
 {
 	int	count;
@@ -112,7 +151,7 @@ t_list	*new_lst(char **argv)
 	{
 		n = malloc(sizeof(int));
 		*n = ft_atoi(*argv++);
-		if (n < 0)
+		if (*n < 0)
 			return (ft_printf("Error"), NULL);
 		node = ft_new_node(n);
 		lst_add_back(&list, node);

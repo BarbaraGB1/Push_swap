@@ -42,7 +42,7 @@ int	ft_putnbr_base_hex(unsigned long long n, char *base)
 {
 	unsigned long	len;
 
-	len = ft_strlen(base);
+	len = ft_strlen_print(base);
 	if (n >= len)
 	{
 		ft_putnbr_base_hex(n / len, base);
