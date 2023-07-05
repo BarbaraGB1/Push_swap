@@ -35,9 +35,10 @@ int main(int argc, char **argv)
 {
 	//	int		i;
 	t_list *list;
-	// t_list *second;
+	t_list *second;
 
 	//	i = 0;
+	second = NULL;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (ft_putstr("Error"), 0);
 	else if (argc == 2)
@@ -53,9 +54,14 @@ int main(int argc, char **argv)
 		list = new_lst(argv + 1);
 		if (!is_order(list) || !no_repeat(list))
 			return (ft_printf("Error, argumentos no validos."), ft_lstclear(&list, free), 0);
-		if (ft_lstsize(list) <= '3')
+		if (ft_lstsize(list) == 3)
 			three_arguments(list);
+		if (ft_lstsize(list) == 5)
+			five_arguments(list, second);
+		ft_printf("%i", ft_lstsize(list));
 		print_list(list);
+		ft_lstclear(&list, free);
+		ft_lstclear(&second, free);
 		/*push(&list, &second, "pp \n");
 		push(&list, &second, "pp \n");
 		print_list(list);

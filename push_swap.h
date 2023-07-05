@@ -39,5 +39,6 @@ int is_order(t_list *lst);
 int no_repeat(t_list *lst);
 int no_digit(char **argv);
 void three_arguments(t_list *list);
+void five_arguments(t_list *list, t_list *second);
 
 #endif

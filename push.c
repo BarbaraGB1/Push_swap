@@ -11,21 +11,21 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-void	push(t_list **lst, t_list **second, char *var)
+void push(t_list **lst, t_list **second, char *var)
 {
-	t_list	*tmp;
+	t_list *tmp;
 
 	if (!lst || !second)
-		return ;
+		return;
 	tmp = *lst;
 	*lst = (*lst)->next;
-	if ((*lst)->next->next)
+	if (!*lst)
 	{
 		tmp->next = NULL;
 		*second = tmp;
 	}
 	else
-	{		
+	{
 		tmp->next = *second;
 		*second = tmp;
 	}
