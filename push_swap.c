@@ -24,7 +24,7 @@ char **two_argv(char *s)
 
 t_list *lstlast(t_list *lst)
 {
-	if (!lst)
+if (!lst)
 		return (0);
 	if (!lst->next)
 		return (lst);
@@ -55,7 +55,7 @@ int main(int argc, char **argv)
 		if (!is_order(list) || !no_repeat(list))
 			return (ft_printf("Error, argumentos no validos."), ft_lstclear(&list, free), 0);
 		if (ft_lstsize(list) == 3)
-			three_arguments(list);
+			three_arguments(&list);
 		if (ft_lstsize(list) == 5)
 			five_arguments(list, second);
 		ft_printf("%i", ft_lstsize(list));
@@ -70,7 +70,7 @@ int main(int argc, char **argv)
 		print_list(list);
 		print_list(second);
 		rotate_rr(&list, &second, "rr \n");
-		print_list(list);
+		print_list(list)n
 		print_list(second);
 		reverse_rrr(&list, &second, "rrr \n");
 		print_list(list);

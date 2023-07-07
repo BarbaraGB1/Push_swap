@@ -15,14 +15,14 @@ void push(t_list **lst, t_list **second, char *var)
 {
 	t_list *tmp;
 
-	if (!lst || !second)
+	if (!lst)
 		return;
 	tmp = *lst;
 	*lst = (*lst)->next;
-	if (!*lst)
+	if (!*second)
 	{
-		tmp->next = NULL;
 		*second = tmp;
+		tmp->next = NULL;
 	}
 	else
 	{

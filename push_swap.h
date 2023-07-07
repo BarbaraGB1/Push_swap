@@ -38,7 +38,8 @@ void reverse_rrr(t_list **lst, t_list **second, char *var);
 int is_order(t_list *lst);
 int no_repeat(t_list *lst);
 int no_digit(char **argv);
-void three_arguments(t_list *list);
+void three_arguments(t_list **list);
 void five_arguments(t_list *list, t_list *second);
+int	min_number(t_list **list);
 
 #endif
