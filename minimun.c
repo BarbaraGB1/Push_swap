@@ -6,7 +6,7 @@ int	min_number(t_list **list)
 	t_list	*iter;
 	int		c;
 	int		p;
-	
+
 	current = *list;
 	iter = NULL;
 	p = *current->content;
@@ -25,6 +25,4 @@ int	min_number(t_list **list)
 		current = current->next;
 	}
 	return (p);
-}	
-
-
+}

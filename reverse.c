@@ -14,7 +14,7 @@
 #include "push_swap.h"
 
 void	reverse(t_list **lst, char *var)
-{	
+{
 	t_list	*temp;
 	t_list	*nodotemp;
 

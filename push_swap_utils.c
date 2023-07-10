@@ -10,14 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
-
 #include "ft_printf/ft_printf.h"
 #include "push_swap.h"
 
-int no_repeat(t_list *lst)
+int	no_repeat(t_list *lst)
 {
-	t_list *current;
-	t_list *iter;
+	t_list	*current;
+	t_list	*iter;
 
 	current = NULL;
 	iter = NULL;
@@ -38,6 +37,7 @@ int no_repeat(t_list *lst)
 	}
 	return (1);
 }
+
 int	is_order(t_list *lst)
 {
 	t_list	*iter;
@@ -48,33 +48,32 @@ int	is_order(t_list *lst)
 	while (iter->next)
 	{
 		if (*iter->content > *iter->next->content)
-		{
 			return (1);
-		}
 		iter = iter->next;
 	}
 	return (0);
 }
 
- int no_digit(char **argv)
- {
+ int	no_digit(char **argv)
+{
 	int	i;
 	int	j;
 
 	i = 1;
-	while(argv[i])
+	while (argv[i])
 	{
 		j = 0;
-		while(argv[i][j])
+		while (argv[i][j])
 		{
-			if(!(argv[i][j] >= '0') && !(argv[i][j] <= '9'))
+			if (!(argv[i][j] >= '0') && !(argv[i][j] <= '9'))
 				return (0);
 			j++;
 		}
-	i++;
+		i++;
 	}
 	return (1);
- }
+}
+
 void	print_list(t_list *list)
 {
 	int	count;

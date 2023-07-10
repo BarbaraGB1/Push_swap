@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-void push(t_list **lst, t_list **second, char *var)
+void	push(t_list **lst, t_list **second, char *var)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	if (!lst)
 		return;
