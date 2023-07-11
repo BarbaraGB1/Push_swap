@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-int	min_number(t_list **list)
+int	mix_number(t_list **list, int n)
 {
 	t_list	*current;
 	t_list	*iter;
@@ -28,8 +28,11 @@ int	min_number(t_list **list)
 		while (iter)
 		{
 			c = *iter->content;
-			if (p > c)
+			if (n && p < c)
 				p = c;
+			if (!n && p > c)
+				p = c;
+
 			iter = iter->next;
 			//ft_printf("%i", p);
 		}

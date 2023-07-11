@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include "libft/libft.h"
 # include "ft_printf/ft_printf.h"
+# define MAX 1
+# define MIN 0
 
 // typedef struct t_lst {
 //	int				*val;
@@ -40,7 +42,7 @@ int		no_repeat(t_list *lst);
 int		no_digit(char **argv);
 void	three_arguments(t_list **list);
 void	five_arguments(t_list *list, t_list *second);
-int		min_number(t_list **list);
+int		mix_number(t_list **list, int n);
 void	four_arguments(t_list **lst, t_list **second);
 
 #endif

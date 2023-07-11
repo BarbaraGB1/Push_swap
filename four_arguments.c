@@ -19,7 +19,7 @@ void	four_arguments(t_list **lst, t_list **second)
 	if (!*lst)
 		return ;
 	first = *lst;
-	n = min_number(lst);
+	n = mix_number(lst, MIN);
 	if (!is_order(*lst))
 		return ;
 	if (*first->content == n)

@@ -19,15 +19,13 @@ void	three_arguments(t_list **list)
 	if (!*list)
 		return ;
 	current = (*list)->next;
-	if ((*((*list)->content) < *current->content) && (*current->content < *current->next->content))
+	if (!is_order(*list))
 		return ;
+	if (*((*list)->content) > *current->next->content)
+		rotate(list, "ra\n");
 	if (*((*list)->content) > *current->content)
-	{
 		swap(*list, "sa\n");
-	}
 	if (*current->content > *current->next->content)
-	{
 		reverse(list, "rra\n");
-	}
 	three_arguments(list);
 }
