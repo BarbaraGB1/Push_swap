@@ -152,8 +152,6 @@ t_list	*new_lst(char **argv)
 		if (!n)
 			return (0);
 		*n = ft_atoi(*argv++);
-		if (*n < 0)
-			return (ft_printf("Error"), NULL);
 		node = ft_new_node(n);
 		if (!node)
 			return (0);

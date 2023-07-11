@@ -13,22 +13,22 @@
 
 void	four_arguments(t_list **lst, t_list **second)
 {
-	t_list	*first;
+	//t_list	*first;
 	int		n;
 
 	if (!*lst)
 		return ;
-	first = *lst;
+	//first = *lst;
 	n = mix_number(lst, MIN);
 	if (!is_order(*lst))
 		return ;
-	if (*first->content == n)
+	if ((*(*lst)->content) == n)
 	{
 		push(lst, second, "pb\n");
 		three_arguments(lst);
 		push(second, lst, "pa\n");
+		return ;
 	}
-	else
-		rotate(lst, "rra\n");
+	rotate(lst, "rra\n");
 	four_arguments(lst, second);
 }

@@ -34,7 +34,7 @@ int	mix_number(t_list **list, int n)
 				p = c;
 
 			iter = iter->next;
-			//ft_printf("%i", p);
+		//	ft_printf("%i", p);
 		}
 		current = current->next;
 	}

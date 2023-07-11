@@ -41,7 +41,7 @@ int		is_order(t_list *lst);
 int		no_repeat(t_list *lst);
 int		no_digit(char **argv);
 void	three_arguments(t_list **list);
-void	five_arguments(t_list *list, t_list *second);
+void	five_arguments(t_list **lst, t_list **second);
 int		mix_number(t_list **list, int n);
 void	four_arguments(t_list **lst, t_list **second);
 

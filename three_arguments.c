@@ -9,6 +9,7 @@
 /*   Updated: 2023/07/10 09:09:43 by osadia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "ft_printf/ft_printf.h"
 #include "push_swap.h"
 
 void	three_arguments(t_list **list)
@@ -21,7 +22,7 @@ void	three_arguments(t_list **list)
 	current = (*list)->next;
 	if (!is_order(*list))
 		return ;
-	if (*((*list)->content) > *current->next->content)
+	if (*((*list)->content) > *((*list)->next->content))
 		rotate(list, "ra\n");
 	if (*((*list)->content) > *current->content)
 		swap(*list, "sa\n");

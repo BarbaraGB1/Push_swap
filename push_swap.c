@@ -53,12 +53,14 @@ int	main(int argc, char **argv)
 		list = new_lst(argv + 1);
 		if (!is_order(list) || !no_repeat(list))
 			return (ft_printf("Error, argumentos no validos."), ft_lstclear(&list, free), 0);
-		ft_printf("minimo: %i",mix_number(&list, MAX));
+		//ft_printf("minimo: %i",mix_number(&list, MAX));
 		//four_arguments(&list, &second);
 		if (ft_lstsize(list) == 3)
 			three_arguments(&list);
-		/*if (ft_lstsize(list) == 5)
-			five_arguments(list, second);*/
+		if (ft_lstsize(list) == 4)
+			four_arguments(&list, &second);
+		if (ft_lstsize(list) == 5)
+			five_arguments(&list, &second);
 //		ft_printf("%i", ft_lstsize(list));
 		print_list(list);
 		ft_lstclear(&list, free);
