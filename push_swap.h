@@ -41,6 +41,6 @@ int		no_digit(char **argv);
 void	three_arguments(t_list **list);
 void	five_arguments(t_list *list, t_list *second);
 int		min_number(t_list **list);
-void	four_arguments(t_list **list, t_list **second);
+void	four_arguments(t_list **lst, t_list **second);
 
 #endif

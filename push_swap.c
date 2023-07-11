@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+        */
+/*   By: osadia </var/spool/mail/osadia>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/26 11:43:19 by bargarci          #+#    #+#             */
-/*   Updated: 2023/06/26 11:43:25 by bargarci         ###   ########.fr       */
+/*   Created: 2023/07/10 09:07:20 by osadia            #+#    #+#             */
+/*   Updated: 2023/07/10 09:07:45 by osadia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"

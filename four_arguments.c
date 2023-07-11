@@ -1,8 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   four_arguments.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: osadia </var/spool/mail/osadia>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/10 09:08:02 by osadia            #+#    #+#             */
+/*   Updated: 2023/07/10 09:08:08 by osadia           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
-void four_arguments(t_list **list, t_list **second)
+void	four_arguments(t_list **lst, t_list **second)
 {
-	ft_printf("El mínimo de la lista es: %i", min_number(list));
-	ft_printf("El mínimo de la lista es: %i", min_number(second));
-	return ;
+	t_list	*first;
+	int		n;
+
+	if (!*lst)
+		return ;
+	first = *lst;
+	n = min_number(lst);
+	if (!is_order(*lst))
+		return ;
+	if (*first->content == n)
+	{
+		push(lst, second, "pb\n");
+		three_arguments(lst);
+		push(second, lst, "pa\n");
+	}
+	else
+		rotate(lst, "rra\n");
+	four_arguments(lst, second);
 }
