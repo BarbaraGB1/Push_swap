@@ -44,5 +44,7 @@ void	three_arguments(t_list **list);
 void	five_arguments(t_list **lst, t_list **second);
 int		mix_number(t_list **list, int n);
 void	four_arguments(t_list **lst, t_list **second);
+//int		*do_chunks(t_list *lst);
+t_list	*sort_numbers(t_list *lst,  t_list *second);
 
 #endif
