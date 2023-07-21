@@ -31,6 +31,16 @@ t_list	*lstlast(t_list *lst)
 	return (lstlast(lst->next));
 }
 
+void	free_split(char **arr)
+{
+	int	i;
+	
+	i = 0;
+	while (arr[i])
+		free(arr[i++]);
+	free(arr);
+}
+
 int	main(int argc, char **argv)
 {
 	t_list	*list;
@@ -44,7 +54,8 @@ int	main(int argc, char **argv)
 	{
 		argv = two_argv(argv[1]);
 		list = new_lst(argv);
-		print_list(list);
+		free_split(argv);
+		//print_list(list);
 	}
 	else
 	{
@@ -53,33 +64,10 @@ int	main(int argc, char **argv)
 		list = new_lst(argv + 1);
 		if (!is_order(list) || !no_repeat(list))
 			return (ft_printf("Error, argumentos no validos."), ft_lstclear(&list, free), 0);
-		sort_numbers(list, second);
-		print_list(list);
-		ft_lstclear(&list, free);
-		ft_lstclear(&second, free);
-		//ft_printf("minimo: %i",mix_number(&list, MAX));
-		//four_arguments(&list, &second);
-//		ft_printf("%i", ft_lstsize(list));
-		// print_list(list);
-		// ft_lstclear(&list, free);
-		// ft_lstclear(&second, free);
-		/*push(&list, &second, "pp \n");
-		push(&list, &second, "pp \n");
-		print_list(list);
-		print_list(second);
-		swap_ss(list, second, "ss \n");
-		print_list(list);
-		print_list(second);
-		rotate_rr(&list, &second, "rr \n");
-		print_list(list)n
-		print_list(second);
-		reverse_rrr(&list, &second, "rrr \n");
-		print_list(list);
-		print_list(second);*/
 	}
-	// sort_numbers(list, second);
-	// print_list(list);
-	// ft_lstclear(&list, free);
-	// ft_lstclear(&second, free);
+	sort_numbers(&list, &second);
+//	print_list(list);
+	ft_lstclear(&list, free);
+	ft_lstclear(&second, free);
 	return (0);
 }

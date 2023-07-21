@@ -19,7 +19,7 @@ void	five_arguments(t_list **lst, t_list **second)
 		return ;
 	}
 	else
-		rotate(lst, "rra\n");
+		rotate(lst, "ra\n");
 	five_arguments(lst, second);
 }
 	/*void five_arguments(t_list *list, t_list *second) 

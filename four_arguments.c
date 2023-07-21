@@ -29,6 +29,6 @@ void	four_arguments(t_list **lst, t_list **second)
 		push(second, lst, "pa\n");
 		return ;
 	}
-	rotate(lst, "rra\n");
+	rotate(lst, "ra\n");
 	four_arguments(lst, second);
 }
