@@ -87,10 +87,9 @@ void	print_list(t_list *list)
 	while (list)
 	{
 		++count;
-		printf("%d - Node: %i------------%d - Index: %i\n ", count, *(list->content), count, list->index);
-	//	printf("%i - index: %i\n", count, list->index);
+		printf("%d - Node: %i\n ", count, *(list->content));
 		list = list->next;
-	}
+ }
 }
 
 void	free_list(t_list **list)

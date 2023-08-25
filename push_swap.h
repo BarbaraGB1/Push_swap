@@ -49,4 +49,5 @@ t_list	*sort_numbers(t_list **lst,  t_list **second);
 void	two_arguments(t_list **lst);
 void	put_index(t_list **list);
 t_list	*find_min(t_list **list);
+void	radix_algorithm(t_list **list, t_list **second);
 #endif

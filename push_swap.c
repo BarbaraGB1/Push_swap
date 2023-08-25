@@ -67,7 +67,7 @@ int	main(int argc, char **argv)
 			return (ft_printf("Error, argumentos no validos."), ft_lstclear(&list, free), 0);
 	}
 	put_index(&list);
-	print_list(list);
+	//print_list(list);
 	sort_numbers(&list, &second);
 	//print_list(list);
 	ft_lstclear(&list, free);

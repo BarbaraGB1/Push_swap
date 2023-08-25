@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int	*do_chunks(t_list *lst)
+/*int	*do_chunks(t_list *lst)
 {
 	int	*intervals;
 	int	i;
@@ -25,7 +25,7 @@ int	*do_chunks(t_list *lst)
 	}
 	intervals[i] = mix_number(&lst, MAX) + 1;
 	return (intervals);
-}
+}*/
 
 t_list	*sort_numbers(t_list **lst,  t_list **second)
 {
@@ -39,6 +39,6 @@ t_list	*sort_numbers(t_list **lst,  t_list **second)
 	else if (ft_lstsize(*lst) == 5)
 		five_arguments(lst, second);
 	else
-		do_chunks(*lst);
+	radix_algorithm(lst, second);
 	return(*lst);
 }

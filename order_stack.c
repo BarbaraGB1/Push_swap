@@ -12,7 +12,7 @@
 #include "libft/libft.h"
 #include "push_swap.h"
 
-void	radix_algorithm(t_list **list)
+void	radix_algorithm(t_list **list, t_list **second)
 {
 	int	i;
 	int	j;
@@ -20,7 +20,26 @@ void	radix_algorithm(t_list **list)
 
 	i = 0;
 	size = ft_lstsize(*list);
-	while(!is_order(*list))
-	{}
+	while(is_order(*list))
+	{
+		j = 0;
+		while(j++ < size)
+		{
+			if (((*list)->index >> i & 1) == 1)
+			{
+				rotate(list, "ra\n");	
+			}
+			else 
+			{
+				push(list, second, "pb\n");
+			}
+		}
+		while (ft_lstsize(*second) != 0)
+		{
+			push(second, list, "pa\n");
+		}
+		i++;
+	}
 }
+
 
