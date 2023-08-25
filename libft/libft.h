@@ -14,14 +14,10 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-// typedef struct s_lst
-// {
-// 	int		*val;
-// 	struct t_lst	*next;
-// }	t_lst;
 typedef struct s_list
 {
 	int				*content;
+	int				index;
 	struct s_list	*next;
 }	t_list;
 /* typedef unsigned long size_t */

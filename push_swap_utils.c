@@ -87,7 +87,8 @@ void	print_list(t_list *list)
 	while (list)
 	{
 		++count;
-		printf("%d - Node: %i\n", count, *(list->content));
+		printf("%d - Node: %i------------%d - Index: %i\n ", count, *(list->content), count, list->index);
+	//	printf("%i - index: %i\n", count, list->index);
 		list = list->next;
 	}
 }
@@ -119,6 +120,7 @@ t_list	*ft_new_node(int *val)
 		return (NULL);
 	node->content = val;
 	node->next = NULL;
+	node->index = -1;
 	return (node);
 }
 
@@ -142,7 +144,7 @@ t_list	*new_lst(char **argv)
 	int				*n;
 
 	list = NULL;
-	node = NULL;
+	node = NULL;		
 	n = 0;
 	if (!argv)
 		return (NULL);

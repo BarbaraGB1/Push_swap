@@ -55,18 +55,21 @@ int	main(int argc, char **argv)
 		argv = two_argv(argv[1]);
 		list = new_lst(argv);
 		free_split(argv);
-		//print_list(list);
+		print_list(list);
 	}
 	else
 	{
 		if (!no_digit(argv))
 			return (ft_printf("Los argumentos no pueden contener carácteres alfabéticos"), 0);
 		list = new_lst(argv + 1);
+	//	print_list(list);
 		if (!is_order(list) || !no_repeat(list))
 			return (ft_printf("Error, argumentos no validos."), ft_lstclear(&list, free), 0);
 	}
+	put_index(&list);
+	print_list(list);
 	sort_numbers(&list, &second);
-//	print_list(list);
+	//print_list(list);
 	ft_lstclear(&list, free);
 	ft_lstclear(&second, free);
 	return (0);
