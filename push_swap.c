@@ -55,7 +55,7 @@ int	main(int argc, char **argv)
 		argv = two_argv(argv[1]);
 		list = new_lst(argv);
 		free_split(argv);
-		print_list(list);
+	//	print_list(list);
 	}
 	else
 	{
