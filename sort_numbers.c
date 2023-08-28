@@ -27,18 +27,3 @@
 	return (intervals);
 }*/
 
-t_list	*sort_numbers(t_list **lst,  t_list **second)
-{
-
-	if (ft_lstsize(*lst) == 2)
-		two_arguments(lst);
-	else if (ft_lstsize(*lst) == 3)
-		three_arguments(lst);
-	else if (ft_lstsize(*lst) == 4)
-		four_arguments(lst, second);
-	else if (ft_lstsize(*lst) == 5)
-		five_arguments(lst, second);
-	else
-	radix_algorithm(lst, second);
-	return(*lst);
-}

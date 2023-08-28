@@ -54,6 +54,10 @@ int	is_order(t_list *lst)
 	return (0);
 }
 
+int	no_MIN_MAX(t_list **list)
+{
+
+}
  int	no_digit(char **argv)
 {
 	int	i;
@@ -65,7 +69,7 @@ int	is_order(t_list *lst)
 		j = 0;
 		while (argv[i][j])
 		{
-			if (!(argv[i][j] >= '0') && !(argv[i][j] <= '9'))
+			if ((argv[i][j] < '0') || (argv[i][j] > '9'))
 				return (0);
 			j++;
 		}
@@ -152,7 +156,7 @@ t_list	*new_lst(char **argv)
 		n = malloc(sizeof(int));
 		if (!n)
 			return (0);
-		*n = ft_atoi(*argv++);
+		*n = ft_atol(*argv++);
 		node = ft_new_node(n);
 		if (!node)
 			return (0);
