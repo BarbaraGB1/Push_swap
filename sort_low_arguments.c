@@ -24,16 +24,30 @@ void	two_arguments(t_list **lst)
 
 void	three_arguments(t_list **list)
 {
-	if (!*list)
-		return ;
 	if (!is_order(*list))
 		return ;
-	if (*((*list)->content) > *((*list)->next->next->content))
+	else if ((*((*list)->content) > *((*list)->next->content))
+		&& ((*((*list)->next->content) < *((*list)->next->next->content))
+			&& (*((*list)->content) > *((*list)->next->next->content))))
 		rotate(list, "ra\n");
-	if (*((*list)->content) > *((*list)->next->content))
+	else if ((*((*list)->content) > *((*list)->next->content))
+		&& (*((*list)->content) > *((*list)->next->next->content)))
+	{
 		swap(*list, "sa\n");
-	if (*((*list)->next->content) > *((*list)->next->next->content))
 		reverse(list, "rra\n");
+	}
+	else if ((*((*list)->next->content) > *((*list)->next->next->content))
+		&& (*((*list)->content) < *((*list)->next->next->content)))
+	{
+		swap(*list, "sa\n");
+		rotate(list, "ra\n");
+	}
+	else if (*((*list)->content) > *((*list)->next->content))
+		swap(*list, "sa\n");
+	else if (*((*list)->next->content) > *((*list)->next->next->content))
+		reverse(list, "rra\n");
+	else if (*((*list)->content) > *((*list)->next->next->content))
+		rotate(list, "ra\n");
 	three_arguments(list);
 }
 

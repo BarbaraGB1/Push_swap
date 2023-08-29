@@ -20,10 +20,7 @@ void	print_list(t_list *list)
 
 	count = 0;
 	if (!list)
-	{
-		ft_printf("Empty List");
 		return ;
-	}
 	while (list)
 	{
 		++count;
