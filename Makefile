@@ -6,12 +6,12 @@
 #    By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/26 11:40:52 by bargarci          #+#    #+#              #
-#    Updated: 2023/06/26 11:47:20 by bargarci         ###   ########.fr        #
+#    Updated: 2023/08/29 07:41:17 by bargarci         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= push_swap
-SRCS		= push_swap.c push_swap_utils.c swap.c rotate.c reverse.c push.c three_arguments.c five_arguments.c minimun.c four_arguments.c sort_numbers.c two_arguments.c index_list.c order_stack.c
+SRCS		= push_swap.c push_swap_utils.c swap.c rotate.c reverse.c push.c index_list.c order_stack.c errors.c sort_low_arguments.c
 OBJS		= $(SRCS:.c=.o)
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror -fsanitize=address -g3

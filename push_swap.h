@@ -6,7 +6,7 @@
 /*   By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 11:43:45 by bargarci          #+#    #+#             */
-/*   Updated: 2023/06/26 11:43:49 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/08/29 07:36:36 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -18,11 +18,6 @@
 # include "ft_printf/ft_printf.h"
 # define MAX 1
 # define MIN 0
-
-// typedef struct t_lst {
-//	int				*val;
-//	struct t_lst	*next;
-// }					t_lst;
 
 void	swap(t_list *lst, char *var);
 void	lst_add_back(t_list **list, t_list *node);
@@ -44,10 +39,10 @@ void	three_arguments(t_list **list);
 void	five_arguments(t_list **lst, t_list **second);
 int		mix_number(t_list **list, int n);
 void	four_arguments(t_list **lst, t_list **second);
-//int		*do_chunks(t_list *lst);
-t_list	*sort_numbers(t_list **lst,  t_list **second);
+t_list	*sort_numbers(t_list **lst, t_list **second);
 void	two_arguments(t_list **lst);
 void	put_index(t_list **list);
 t_list	*find_min(t_list **list);
 void	radix_algorithm(t_list **list, t_list **second);
+int		no_min_max(t_list **list);
 #endif

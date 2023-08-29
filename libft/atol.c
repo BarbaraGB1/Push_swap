@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   atol.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/29 07:41:39 by bargarci          #+#    #+#             */
+/*   Updated: 2023/08/29 07:41:45 by bargarci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
-unsigned long	ft_atol(const char *str)
+long	ft_atol(const char *str)
 {
-	int	i;
-	unsigned long	sg;
-	unsigned long	nb;
+	int		i;
+	long	sg;
+	long	nb;
 
 	i = 0;
 	sg = 1;

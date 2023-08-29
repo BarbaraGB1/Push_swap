@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   index_list.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: osadia </var/spool/mail/osadia>            +#+  +:+       +#+        */
+/*   By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/25 11:33:28 by osadia            #+#    #+#             */
-/*   Updated: 2023/08/25 11:33:59 by osadia           ###   ########.fr       */
+/*   Created: 2023/08/29 07:39:23 by bargarci          #+#    #+#             */
+/*   Updated: 2023/08/29 07:39:30 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft/libft.h"
@@ -24,7 +24,8 @@ t_list	*find_min(t_list **list)
 	current = *list;
 	while (current)
 	{
-		if (current->index == -1 && ((start == 0) || (*current->content < *min->content)))
+		if (current->index == -1 && ((start == 0)
+				|| (*current->content < *min->content)))
 		{
 			start = 1;
 			min = current;

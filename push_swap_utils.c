@@ -6,77 +6,13 @@
 /*   By: bargarci <bargarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 11:44:09 by bargarci          #+#    #+#             */
-/*   Updated: 2023/06/26 11:44:14 by bargarci         ###   ########.fr       */
+/*   Updated: 2023/08/29 07:35:56 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 #include "ft_printf/ft_printf.h"
 #include "push_swap.h"
-
-int	no_repeat(t_list *lst)
-{
-	t_list	*current;
-	t_list	*iter;
-
-	current = NULL;
-	iter = NULL;
-	if (!lst)
-		return (0);
-	current = lst;
-	iter = lst->next;
-	while (current)
-	{
-		iter = current->next;
-		while (iter)
-		{
-			if (*current->content == *iter->content)
-				return (0);
-			iter = iter->next;
-		}
-		current = current->next;
-	}
-	return (1);
-}
-
-int	is_order(t_list *lst)
-{
-	t_list	*iter;
-
-	if (!lst)
-		return (0);
-	iter = lst;
-	while (iter->next)
-	{
-		if (*iter->content > *iter->next->content)
-			return (1);
-		iter = iter->next;
-	}
-	return (0);
-}
-
-int	no_MIN_MAX(t_list **list)
-{
-
-}
- int	no_digit(char **argv)
-{
-	int	i;
-	int	j;
-
-	i = 1;
-	while (argv[i])
-	{
-		j = 0;
-		while (argv[i][j])
-		{
-			if ((argv[i][j] < '0') || (argv[i][j] > '9'))
-				return (0);
-			j++;
-		}
-		i++;
-	}
-	return (1);
-}
+#include <limits.h>
 
 void	print_list(t_list *list)
 {
@@ -93,7 +29,7 @@ void	print_list(t_list *list)
 		++count;
 		printf("%d - Node: %i\n ", count, *(list->content));
 		list = list->next;
- }
+	}
 }
 
 void	free_list(t_list **list)
@@ -147,7 +83,7 @@ t_list	*new_lst(char **argv)
 	int				*n;
 
 	list = NULL;
-	node = NULL;		
+	node = NULL;
 	n = 0;
 	if (!argv)
 		return (NULL);
