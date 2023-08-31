@@ -24,7 +24,7 @@ void	print_list(t_list *list)
 	while (list)
 	{
 		++count;
-		printf("%d - Node: %i\n ", count, *(list->content));
+		printf("%d - Node: %li\n ", count, *(list->content));
 		list = list->next;
 	}
 }
@@ -47,7 +47,7 @@ void	free_list(t_list **list)
 	*list = NULL;
 }
 
-t_list	*ft_new_node(int *val)
+t_list	*ft_new_node(long *val)
 {
 	t_list	*node;
 
@@ -77,7 +77,7 @@ t_list	*new_lst(char **argv)
 {
 	t_list			*list;
 	t_list			*node;
-	int				*n;
+	long			*n;
 
 	list = NULL;
 	node = NULL;
@@ -86,13 +86,17 @@ t_list	*new_lst(char **argv)
 		return (NULL);
 	while (*argv)
 	{
-		n = malloc(sizeof(int));
+		n = malloc(sizeof(long));
 		if (!n)
 			return (0);
 		*n = ft_atol(*argv++);
 		node = ft_new_node(n);
 		if (!node)
+		{
+			free(n);
+			free(list);
 			return (0);
+		}
 		lst_add_back(&list, node);
 	}
 	return (list);

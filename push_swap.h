@@ -21,7 +21,7 @@
 
 void	swap(t_list *lst, char *var);
 void	lst_add_back(t_list **list, t_list *node);
-t_list	*ft_new_node(int *val);
+t_list	*ft_new_node(long *val);
 t_list	*new_lst(char **argv);
 void	print_list(t_list *list);
 void	free_list(t_list **list);
@@ -45,4 +45,5 @@ void	put_index(t_list **list);
 t_list	*find_min(t_list **list);
 void	radix_algorithm(t_list **list, t_list **second);
 int		no_min_max(t_list **list);
+void	aux_fivearguments(t_list **lst, t_list **second);
 #endif

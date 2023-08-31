@@ -11,6 +11,34 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
+int	mix_number(t_list **list, int n)
+{
+	t_list	*current;
+	t_list	*iter;
+	int		c;
+	int		p;
+
+	current = *list;
+	iter = NULL;
+	p = *current->content;
+	c = 0;
+	while (current)
+	{
+		iter = current->next;
+		while (iter)
+		{
+			c = *iter->content;
+			if (n && p < c)
+				p = c;
+			if (!n && p > c)
+				p = c;
+			iter = iter->next;
+		}
+		current = current->next;
+	}
+	return (p);
+}
+
 t_list	*lstlast(t_list *lst)
 {
 	if (!lst)
@@ -25,6 +53,7 @@ int	main(int argc, char **argv)
 	t_list	*list;
 	t_list	*second;
 
+	list = NULL;
 	second = NULL;
 	if (!no_digit(argv))
 		return (write(2, "Error\n", 7), 0);
@@ -33,7 +62,7 @@ int	main(int argc, char **argv)
 	else
 		list = new_lst(argv + 1);
 	if (!is_order(list))
-		return (0);
+		return (ft_lstclear(&list, free), 0);
 	if (!no_repeat(list) || !no_min_max(&list))
 		return (write(2, "Error\n", 7), ft_lstclear(&list, free), 0);
 	put_index(&list);

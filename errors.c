@@ -62,7 +62,7 @@ int	no_min_max(t_list **list)
 	current = *list;
 	while (current)
 	{
-		if (*current->content > INT_MAX && *current->content < INT_MIN)
+		if (*current->content > INT_MAX || *current->content < INT_MIN)
 			return (0);
 		current = current->next;
 	}

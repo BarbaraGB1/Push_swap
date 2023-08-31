@@ -9,6 +9,7 @@
 /*   Updated: 2023/08/29 08:07:37 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft/libft.h"
 #include "push_swap.h"
 
 void	two_arguments(t_list **lst)
@@ -71,53 +72,40 @@ void	four_arguments(t_list **lst, t_list **second)
 	four_arguments(lst, second);
 }
 
-void	five_arguments(t_list **lst, t_list **second)
+void	aux_fivearguments(t_list **lst, t_list **second)
 {
 	t_list	*first;
-	int		n;
+	t_list	*last;
 
-	if (!*lst)
-		return ;
 	first = *lst;
-	n = mix_number(lst, MIN);
-	if (!is_order(*lst))
-		return ;
-	if (*first->content == n)
+	last = lstlast(*lst);
+	if (*first->content == mix_number(lst, MIN))
 	{
 		push(lst, second, "pb\n");
 		four_arguments(lst, second);
 		push(second, lst, "pa\n");
 		return ;
 	}
+	else if (*last->content == mix_number(lst, MIN))
+	{
+		reverse(lst, "rra\n");
+		push(lst, second, "pb\n");
+		four_arguments(lst, second);
+		push(second, lst, "pa\n");
+		return ;
+	}
 	else
+	{
 		rotate(lst, "ra\n");
-	five_arguments(lst, second);
+		five_arguments(lst, second);
+	}
 }
 
-int	mix_number(t_list **list, int n)
+void	five_arguments(t_list **lst, t_list **second)
 {
-	t_list	*current;
-	t_list	*iter;
-	int		c;
-	int		p;
-
-	current = *list;
-	iter = NULL;
-	p = *current->content;
-	c = 0;
-	while (current)
-	{
-		iter = current->next;
-		while (iter)
-		{
-			c = *iter->content;
-			if (n && p < c)
-				p = c;
-			if (!n && p > c)
-				p = c;
-			iter = iter->next;
-		}
-		current = current->next;
-	}
-	return (p);
+	if (!*lst)
+		return ;
+	if (!is_order(*lst))
+		return ;
+	aux_fivearguments(lst, second);
 }

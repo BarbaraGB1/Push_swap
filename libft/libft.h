@@ -17,7 +17,7 @@
 
 typedef struct s_list
 {
-	int				*content;
+	long			*content;
 	int				index;
 	struct s_list	*next;
 }	t_list;

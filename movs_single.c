@@ -13,7 +13,7 @@
 
 void	swap(t_list *lst, char *var)
 {
-	int	*temp;
+	long	*temp;
 
 	if (ft_lstsize(lst) <= 1)
 		return ;
