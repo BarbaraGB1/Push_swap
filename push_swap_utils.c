@@ -9,7 +9,6 @@
 /*   Updated: 2023/08/29 07:35:56 by bargarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 #include "ft_printf/ft_printf.h"
 #include "push_swap.h"
 #include <limits.h>
@@ -24,7 +23,7 @@ void	print_list(t_list *list)
 	while (list)
 	{
 		++count;
-		printf("%d - Node: %li\n ", count, *(list->content));
+		ft_printf("%d - Node: %li\n ", count, *(list->content));
 		list = list->next;
 	}
 }

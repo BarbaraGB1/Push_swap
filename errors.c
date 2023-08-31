@@ -78,7 +78,7 @@ int	no_digit(char **argv)
 	while (argv[i])
 	{
 		j = 0;
-		if (argv[i][0] == '-' || (argv[i][0] >= '0' && argv[i][0] <= '9'))
+		if (argv[i][0] == '-' && (argv[i][1] >= '0' && argv[i][1] <= '9'))
 			j++;
 		while (argv[i][j])
 		{

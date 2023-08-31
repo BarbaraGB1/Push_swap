@@ -14,7 +14,7 @@ NAME		= push_swap
 SRCS		= push_swap.c push_swap_utils.c index_list.c order_stack.c errors.c sort_low_arguments.c movs_single.c movs_double.c
 OBJS		= $(SRCS:.c=.o)
 CC			= gcc
-CFLAGS		= -Wall -Wextra -Werror -fsanitize=address -g3
+CFLAGS		= -Wall -Wextra -Werror
 RM			= rm -rf
 LIBFT_DIR	= libft
 LIBFT		= $(LIBFT_DIR)/libft.a
